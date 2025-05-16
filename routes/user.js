@@ -1,4 +1,4 @@
-const express = require("Express");
+const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
 const flash = require("connect-flash");
