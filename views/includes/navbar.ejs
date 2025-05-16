@@ -1,0 +1,55 @@
+<style>
+  .searchBtn{
+    color:white;
+    background-color: #e1390e;
+    border-radius: 25px;
+    display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between text and icon */
+  width: fit-content;
+
+  }
+  .searchBtn i{
+    display: inline;
+    /* font-size: 0.5rem; */
+  }
+  .searchBtn:hover{
+    color:white;
+    background-color: #e1390e;
+  }
+  .searchInput{
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+</style>
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-icons" style="color: #e1390e;"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          
+          <a class="nav-link" href="/listings">All Listings</a>
+          <a class="nav-link" href="/listings/new">Airbnb your home </a>
+               </div>
+               <div class="navbar-search navbar-nav ms-auto ">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2 searchInput" type="search" placeholder="Search Destinations" aria-label="Search"/>
+      <button class="btn searchBtn" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </div>
+               <!-- user account -->
+               <div class="navbar-nav ms-auto">
+                <% if(!currUser) {%>
+                <a class="nav-link" href="/login"><b>Log in</b></a>
+                <a class="nav-link" href="/signup"><b>Sign up</b></a>
+                <%}%>
+                <% if(currUser) {%>
+                <a class="nav-link" href="/logout"><b>Log out</b></a>
+                <%}%>
+                     </div>
+      </div>
+    </div>
+  </nav>
